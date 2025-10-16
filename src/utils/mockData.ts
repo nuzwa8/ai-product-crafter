@@ -47,6 +47,161 @@ export const mockData = {
     }
   ],
   
+  specwriter: [
+    {
+      grid: '12-column grid with 20px gutters',
+      margins: {
+        top: '60px',
+        right: '40px',
+        bottom: '60px',
+        left: '40px'
+      },
+      safeZones: {
+        header: '80px from top',
+        footer: '80px from bottom',
+        sides: '60px from left and right edges'
+      },
+      fonts: {
+        primary: 'Montserrat Bold',
+        secondary: 'Open Sans Regular',
+        freeAlts: ['Poppins', 'Inter', 'Roboto', 'Lato']
+      },
+      palette: ['#0891b2', '#0e7490', '#164e63', '#f0fdfa', '#ccfbf1', '#1e293b'],
+      components: ['Header banner', 'Text block with icon', 'Two-column layout', 'Image placeholder', 'Footer with social icons', 'Call-to-action button'],
+      patterns: {
+        cover: 'Bold headline with gradient overlay, subtitle in lighter weight, hero image with 40% opacity',
+        inner: 'Consistent header bar, body content in 2-column grid, imagery on left, text on right'
+      },
+      exportPresets: ['PDF Print (300 DPI)', 'PDF Digital (72 DPI)', 'PNG Transparent', 'JPG High Quality'],
+      checklist: [
+        'Set up 12-column grid with 20px gutters',
+        'Apply margins and safe zones',
+        'Import or create font pairings',
+        'Apply color palette to brand kit',
+        'Create reusable component templates',
+        'Design cover page following pattern',
+        'Design 3-5 inner page variations',
+        'Test all export presets',
+        'Review alignment and spacing',
+        'Final quality check'
+      ]
+    },
+    {
+      grid: '16-column grid with 16px gutters',
+      margins: {
+        top: '50px',
+        right: '50px',
+        bottom: '50px',
+        left: '50px'
+      },
+      safeZones: {
+        header: '70px from top',
+        footer: '70px from bottom',
+        sides: '50px from left and right edges'
+      },
+      fonts: {
+        primary: 'Playfair Display Bold',
+        secondary: 'Lato Light',
+        freeAlts: ['Libre Baskerville', 'Crimson Text', 'Merriweather', 'Source Sans Pro']
+      },
+      palette: ['#f59e0b', '#d97706', '#92400e', '#fffbeb', '#fef3c7', '#1f2937'],
+      components: ['Elegant header frame', 'Quote block with decorative elements', 'Three-column grid', 'Image gallery layout', 'Signature footer', 'Decorative dividers'],
+      patterns: {
+        cover: 'Centered elegant typography, decorative frame elements, subtle background texture',
+        inner: 'Header with decorative line, asymmetric layout, pull quotes in accent color'
+      },
+      exportPresets: ['PDF Print (300 DPI)', 'PDF Digital (150 DPI)', 'PNG High-Res', 'Canva Template'],
+      checklist: [
+        'Configure 16-column grid system',
+        'Define elegant margins and spacing',
+        'Load serif and sans-serif font pairing',
+        'Create warm color palette swatches',
+        'Build decorative component library',
+        'Design sophisticated cover layout',
+        'Create 4-6 inner page templates',
+        'Add decorative elements and dividers',
+        'Test export settings',
+        'Final elegance review'
+      ]
+    },
+    {
+      grid: 'Golden ratio grid (1:1.618)',
+      margins: {
+        top: '72px',
+        right: '45px',
+        bottom: '72px',
+        left: '45px'
+      },
+      safeZones: {
+        header: '90px from top',
+        footer: '90px from bottom',
+        sides: '65px from left and right edges'
+      },
+      fonts: {
+        primary: 'Raleway ExtraBold',
+        secondary: 'Nunito Sans Regular',
+        freeAlts: ['Quicksand', 'Jost', 'Space Grotesk', 'DM Sans']
+      },
+      palette: ['#8b5cf6', '#7c3aed', '#5b21b6', '#faf5ff', '#e9d5ff', '#171717'],
+      components: ['Modern header stack', 'Card component with shadow', 'Icon + text combo', 'Progress bar element', 'Rounded CTA button', 'Stats display grid'],
+      patterns: {
+        cover: 'Modern bold typography, geometric shapes, vibrant gradient backgrounds',
+        inner: 'Card-based layouts, generous white space, icons for visual interest'
+      },
+      exportPresets: ['PDF Digital (72 DPI)', 'PNG Social Media', 'JPG Compressed', 'SVG Vector'],
+      checklist: [
+        'Apply golden ratio grid proportions',
+        'Set harmonious margins using ratio',
+        'Install modern geometric fonts',
+        'Create vibrant purple-based palette',
+        'Build modern UI component set',
+        'Design bold geometric cover',
+        'Create clean inner page layouts',
+        'Add modern icons and shapes',
+        'Optimize for digital viewing',
+        'Test across devices'
+      ]
+    },
+    {
+      grid: 'Modular grid (6x6 modules)',
+      margins: {
+        top: '80px',
+        right: '60px',
+        bottom: '80px',
+        left: '60px'
+      },
+      safeZones: {
+        header: '100px from top',
+        footer: '100px from bottom',
+        sides: '80px from left and right edges'
+      },
+      fonts: {
+        primary: 'Bebas Neue Bold',
+        secondary: 'Archivo Regular',
+        freeAlts: ['Anton', 'Oswald', 'Fjalla One', 'Work Sans']
+      },
+      palette: ['#dc2626', '#991b1b', '#450a0a', '#fef2f2', '#fecaca', '#0f172a'],
+      components: ['Bold header block', 'Impact statement box', 'Image with text overlay', 'Numbered list component', 'Bold CTA banner', 'Social proof badges'],
+      patterns: {
+        cover: 'High contrast, large bold headlines, striking imagery, minimal text',
+        inner: 'Module-based layout, bold headlines, high-impact visuals, clear hierarchy'
+      },
+      exportPresets: ['PDF Print High-Res (300 DPI)', 'PNG Presentation', 'JPG Social Posts', 'PDF Interactive'],
+      checklist: [
+        'Set up 6x6 modular grid system',
+        'Apply bold margins and spacing',
+        'Configure impact font combination',
+        'Create high-contrast red palette',
+        'Build bold component library',
+        'Design high-impact cover',
+        'Create strong inner layouts',
+        'Add impact elements',
+        'Test print quality',
+        'Final impact review'
+      ]
+    }
+  ],
+  
   'bulk-csv': [
     {
       totalRows: 30,
@@ -244,6 +399,7 @@ export const simulateGeneration = (moduleType: string, formData: any): Promise<a
   const delays: Record<string, number> = {
     'finder': 1500,
     'spec-writer': 2000,
+    'specwriter': 2000,
     'bulk-csv': 3000,
     'listing-kit': 1800,
     'pod-briefs': 1200,

@@ -1,8 +1,5 @@
+import { SpecWriterModule } from '@/modules/specwriter/SpecWriterModule';
+
 export default function SpecWriter() {
-  return (
-    <div className="container mx-auto p-4 lg:p-8">
-      <h1 className="text-3xl font-bold">Spec Writer</h1>
-      <p className="text-muted-foreground mt-2">Coming soon...</p>
-    </div>
-  );
+  return <SpecWriterModule />;
 }
