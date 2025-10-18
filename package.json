@@ -1,300 +1,83 @@
 {
-  "name": "ai-product-crafter", 
+  "name": "vite_react_shadcn_ts",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "build": "vite build",
+    "build:dev": "vite build --mode development",
+    "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@radix-ui/react-slot": "^1.0.2",
-    "@radix-ui/react-select": "^2.0.0",
-    "@radix-ui/react-progress": "^1.0.3",
-    "@radix-ui/react-dialog": "^1.0.5",
-    "@radix-ui/react-label": "^2.0.2",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
-    "lucide-react": "^0.263.1",
-    "tailwind-merge": "^1.14.0",
+    "@hookform/resolvers": "^3.10.0",
+    "@radix-ui/react-accordion": "^1.2.11",
+    "@radix-ui/react-alert-dialog": "^1.1.14",
+    "@radix-ui/react-aspect-ratio": "^1.1.7",
+    "@radix-ui/react-avatar": "^1.1.10",
+    "@radix-ui/react-checkbox": "^1.3.2",
+    "@radix-ui/react-collapsible": "^1.1.11",
+    "@radix-ui/react-context-menu": "^2.2.15",
+    "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-dropdown-menu": "^2.1.15",
+    "@radix-ui/react-hover-card": "^1.1.14",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-menubar": "^1.1.15",
+    "@radix-ui/react-navigation-menu": "^1.2.13",
+    "@radix-ui/react-popover": "^1.1.14",
+    "@radix-ui/react-progress": "^1.1.7",
+    "@radix-ui/react-radio-group": "^1.3.7",
+    "@radix-ui/react-scroll-area": "^1.2.9",
+    "@radix-ui/react-select": "^2.2.5",
+    "@radix-ui/react-separator": "^1.1.7",
+    "@radix-ui/react-slider": "^1.3.5",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-switch": "^1.2.5",
+    "@radix-ui/react-tabs": "^1.1.12",
+    "@radix-ui/react-toast": "^1.2.14",
+    "@radix-ui/react-toggle": "^1.1.9",
+    "@radix-ui/react-toggle-group": "^1.1.10",
+    "@radix-ui/react-tooltip": "^1.2.7",
+    "@tanstack/react-query": "^5.83.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
+    "date-fns": "^3.6.0",
+    "embla-carousel-react": "^8.6.0",
+    "input-otp": "^1.4.2",
+    "lucide-react": "^0.462.0",
+    "next-themes": "^0.3.0",
+    "react": "^18.3.1",
+    "react-day-picker": "^8.10.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.61.1",
+    "react-resizable-panels": "^2.1.9",
+    "react-router-dom": "^6.30.1",
+    "recharts": "^2.15.4",
+    "sonner": "^1.7.4",
+    "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
-    "fabric": "^5.3.0",
-    "jspdf": "^2.5.1",
-    "html2canvas": "^1.4.1",
-    "chroma-js": "^2.4.2"
+    "vaul": "^0.9.9",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@types/chroma-js": "^2.4.4",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "@vitejs/plugin-react": "^4.0.3",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "postcss": "^8.4.27",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "@eslint/js": "^9.32.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^22.16.5",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react-swc": "^3.11.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.32.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^15.15.0",
+    "lovable-tagger": "^1.1.11",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0",
+    "vite": "^5.4.19"
   }
 }
-```
-
-### 2️⃣ **vite.config.ts** (Update existing file)
-```typescript
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
-
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
-  optimizeDeps: {
-    include: ['fabric', 'jspdf', 'html2canvas', 'chroma-js']
-  },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          fabric: ['fabric'],
-          pdf: ['jspdf'],
-          canvas: ['html2canvas'],
-          colors: ['chroma-js']
-        }
-      }
-    }
-  }
-})
-```
-
----
-
-## 📂 **NEW FILES TO CREATE:**
-
-### 3️⃣ **src/types/template.ts** (New file)
-```typescript
-export interface TemplateGeneratorInputs {
-  templateName: string;
-  targetAudience: string;
-  templateType: 'social-post' | 'instagram-story' | 'presentation' | 'flyer' | 'business-card';
-  designTone: 'professional' | 'creative' | 'minimalist' | 'bold' | 'elegant';
-  colorScheme: 'brand' | 'warm' | 'cool' | 'neutral' | 'vibrant';
-  brandColors?: string[];
-}
-
-export interface TemplateDimensions {
-  width: number;
-  height: number;
-}
-
-export interface TemplateVariation {
-  id: string;
-  name: string;
-  preview: string;
-  colorScheme: string[];
-}
-
-export interface GeneratedTemplate {
-  id: string;
-  preview: string; // Base64 data URL
-  metadata: {
-    name: string;
-    dimensions: TemplateDimensions;
-    type: string;
-    generatedAt: Date;
-  };
-  downloads: {
-    png: { url: string; filename: string };
-    jpg: { url: string; filename: string };
-    svg: { url: string; filename: string };
-    pdf: { url: string; filename: string };
-  };
-  variations: TemplateVariation[];
-}
-
-export interface DesignRule {
-  layout: string;
-  spacing: string;
-  shapes: string;
-  hierarchy: string;
-}
-
-export interface GenerationStep {
-  message: string;
-  duration: number;
-}
-
-export const TEMPLATE_DIMENSIONS: Record<string, TemplateDimensions> = {
-  'social-post': { width: 1080, height: 1080 },
-  'instagram-story': { width: 1080, height: 1920 },
-  'presentation': { width: 1920, height: 1080 },
-  'flyer': { width: 595, height: 842 }, // A4 in points
-  'business-card': { width: 252, height: 144 } // 3.5x2 inches in points
-};
-
-export const GENERATION_STEPS: GenerationStep[] = [
-  { message: "Analyzing your requirements...", duration: 800 },
-  { message: "Selecting optimal layout...", duration: 1000 },
-  { message: "Applying color psychology...", duration: 700 },
-  { message: "Generating typography...", duration: 600 },
-  { message: "Creating design elements...", duration: 900 },
-  { message: "Finalizing template...", duration: 500 }
-];
-```
-
-### 4️⃣ **src/lib/utils.ts** (New file)
-```typescript
-import { type ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
-}
-
-export function downloadFile(dataUrl: string, filename: string) {
-  const link = document.createElement('a');
-  link.href = dataUrl;
-  link.download = filename;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-
-export function formatFileSize(bytes: number): string {
-  if (bytes === 0) return '0 Bytes';
-  const k = 1024;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-}
-
-export function sleep(ms: number): Promise<void> {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-```
-
-### 5️⃣ **src/lib/design-rules.ts** (New file)  
-```typescript
-import { DesignRule } from '../types/template';
-import chroma from 'chroma-js';
-
-export const DESIGN_RULES: Record<string, DesignRule> = {
-  professional: {
-    layout: 'grid-aligned',
-    spacing: 'generous-padding',
-    shapes: 'geometric-clean',
-    hierarchy: 'clear-structure'
-  },
-  creative: {
-    layout: 'asymmetrical-dynamic',
-    spacing: 'varied-rhythm',
-    shapes: 'organic-artistic',
-    hierarchy: 'expressive-flow'
-  },
-  minimalist: {
-    layout: 'centered-balanced',
-    spacing: 'maximum-whitespace',
-    shapes: 'essential-only',
-    hierarchy: 'subtle-elegant'
-  },
-  bold: {
-    layout: 'impact-focused',
-    spacing: 'tight-energetic',
-    shapes: 'strong-geometric',
-    hierarchy: 'dramatic-contrast'
-  },
-  elegant: {
-    layout: 'refined-balanced',
-    spacing: 'sophisticated-flow',
-    shapes: 'graceful-curves',
-    hierarchy: 'polished-structure'
-  }
-};
-
-export const COLOR_PALETTES = {
-  warm: ['#ff6b6b', '#ffa726', '#ffee58', '#fff3c4'],
-  cool: ['#42a5f5', '#26c6da', '#66bb6a', '#e8f5e8'],
-  neutral: ['#37474f', '#78909c', '#b0bec5', '#f5f5f5'],
-  vibrant: ['#e91e63', '#ff5722', '#ff9800', '#ffe0b2']
-};
-
-export function generateColorPalette(scheme: string, brandColors?: string[]): string[] {
-  if (scheme === 'brand' && brandColors && brandColors.length > 0) {
-    return brandColors;
-  }
-  
-  const palette = COLOR_PALETTES[scheme as keyof typeof COLOR_PALETTES];
-  return palette || COLOR_PALETTES.neutral;
-}
-
-export function generateColorVariations(baseColors: string[], count: number = 3): string[][] {
-  const variations: string[][] = [];
-  
-  for (let i = 0; i < count; i++) {
-    const variation = baseColors.map(color => {
-      const chromaColor = chroma(color);
-      
-      switch (i) {
-        case 0:
-          return chromaColor.brighten(0.5).hex();
-        case 1:
-          return chromaColor.darken(0.3).hex();
-        case 2:
-          return chromaColor.set('hsl.s', '*0.8').hex();
-        default:
-          return color;
-      }
-    });
-    
-    variations.push(variation);
-  }
-  
-  return variations;
-}
-
-export function selectTypography(designTone: string): {
-  heading: string;
-  body: string;
-  sizes: { heading: number; body: number; caption: number };
-} {
-  const typography = {
-    professional: {
-      heading: 'Inter, system-ui, sans-serif',
-      body: 'Inter, system-ui, sans-serif',
-      sizes: { heading: 32, body: 16, caption: 12 }
-    },
-    creative: {
-      heading: 'Poppins, system-ui, sans-serif',
-      body: 'Open Sans, system-ui, sans-serif',
-      sizes: { heading: 36, body: 14, caption: 10 }
-    },
-    minimalist: {
-      heading: 'Helvetica Neue, system-ui, sans-serif',
-      body: 'Helvetica Neue, system-ui, sans-serif',
-      sizes: { heading: 28, body: 16, caption: 12 }
-    },
-    bold: {
-      heading: 'Montserrat, system-ui, sans-serif',
-      body: 'Roboto, system-ui, sans-serif',
-      sizes: { heading: 40, body: 16, caption: 12 }
-    },
-    elegant: {
-      heading: 'Playfair Display, serif',
-      body: 'Source Sans Pro, system-ui, sans-serif',
-      sizes: { heading: 34, body: 16, caption: 12 }
-    }
-  };
-  
-  return typography[designTone as keyof typeof typography] || typography.professional;
-}
-```
